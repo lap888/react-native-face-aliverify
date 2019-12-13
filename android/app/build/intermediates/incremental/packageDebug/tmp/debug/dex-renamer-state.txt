@@ -1,0 +1,4 @@
+#Thu Dec 12 16:49:40 CST 2019
+base.0=/Users/topbrids/rn_share_pro/faceDemo/android/app/build/intermediates/transforms/dexMerger/debug/0
+path.0=classes.dex
+renamed.0=classes.dex

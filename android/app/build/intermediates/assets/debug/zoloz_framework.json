@@ -1,0 +1,10 @@
+{
+    "framework_version": "4.1.0",
+    "configs": [
+        {
+            "config_file_name":"zoloz_biometric.json",
+            "bundle_name":"",
+            "dynamic":false
+        }
+    ]
+}

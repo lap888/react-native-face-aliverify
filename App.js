@@ -1,114 +1,74 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow
+/*
+ * @Author: top.brids 
+ * @Date: 2019-12-11 23:40:02 
+ * @Last Modified by: top.brids
+ * @Last Modified time: 2019-12-12 16:32:50
  */
 
+
 import React from 'react';
-import {
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
-  View,
-  Text,
-  StatusBar,
-} from 'react-native';
-
-import {
-  Header,
-  LearnMoreLinks,
-  Colors,
-  DebugInstructions,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
-
-const App: () => React$Node = () => {
+import { View, Text, TouchableOpacity, NativeModules, Platform, Alert } from 'react-native';
+const ZIMFacade = NativeModules.ZIMFacade;
+const App = () => {
+  /**
+	 * 调用刷脸SDK，返回身份验证情况
+   * @param {*} url
+	 * @param {*} certifyId 
+	 */
+  let verify = (url, certifyId) => {
+    ZIMFacade.verify(url, certifyId, (response) => {
+      console.log('verify=>', response);
+      if (response) {
+        // 处理业务逻辑
+        console.log('处理业务逻辑...');
+      } else {
+        console.log('认证失败');
+      }
+    });
+  }
+  /**
+  * 调用自己后台服务器接口 获取认证需要参数
+  */
+  let getZimid = (certName, certNo) => {
+    ZIMFacade.getZimFace(certName, certNo,
+      (response) => {
+        console.log('getZimid=>', response);
+        let responseJson = JSON.parse(response);
+        if (responseJson.code == 200) {
+          // 调用刷脸SDK
+          verify(responseJson.data.certifyUrl, responseJson.data.certifyId);
+        } else {
+          console.log('===err===', response.message);
+        }
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
+  }
   return (
-    <>
-      <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        <ScrollView
-          contentInsetAdjustmentBehavior="automatic"
-          style={styles.scrollView}>
-          <Header />
-          {global.HermesInternal == null ? null : (
-            <View style={styles.engine}>
-              <Text style={styles.footer}>Engine: Hermes</Text>
-            </View>
-          )}
-          <View style={styles.body}>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Step One</Text>
-              <Text style={styles.sectionDescription}>
-                Edit <Text style={styles.highlight}>App.js</Text> to change this
-                screen and then come back to see your edits.
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>See Your Changes</Text>
-              <Text style={styles.sectionDescription}>
-                <ReloadInstructions />
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Debug</Text>
-              <Text style={styles.sectionDescription}>
-                <DebugInstructions />
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Learn More</Text>
-              <Text style={styles.sectionDescription}>
-                Read the docs to discover what to do next:
-              </Text>
-            </View>
-            <LearnMoreLinks />
-          </View>
-        </ScrollView>
-      </SafeAreaView>
-    </>
+    <View style={{ justifyContent: 'center', alignItems: 'center', flex: 1, backgroundColor: 'lightgreen' }}>
+      <Text style={{ color: '#fff', fontSize: 14 }}> 点击唤起阿里活体认证 </Text>
+      <TouchableOpacity onPress={() => {
+        Alert.alert(
+          '认证提示',
+          '您确定要进行活体认证吗?',
+          [
+            { text: '取消', onPress: () => console.log('Cancel Pressed'), style: 'cancel' },
+            {
+              text: '确定', onPress: () => {
+                getZimid('李炎杰', '140429200204100014');
+              }
+            },
+          ],
+          { cancelable: false }
+        )
+      }}>
+        <Text style={{ color: 'red', fontSize: 26 }}> 点击唤起阿里活体认证 </Text>
+      </TouchableOpacity>
+    </View>
   );
 };
 
-const styles = StyleSheet.create({
-  scrollView: {
-    backgroundColor: Colors.lighter,
-  },
-  engine: {
-    position: 'absolute',
-    right: 0,
-  },
-  body: {
-    backgroundColor: Colors.white,
-  },
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-    color: Colors.black,
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-    color: Colors.dark,
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-  footer: {
-    color: Colors.dark,
-    fontSize: 12,
-    fontWeight: '600',
-    padding: 4,
-    paddingRight: 12,
-    textAlign: 'right',
-  },
-});
 
 export default App;

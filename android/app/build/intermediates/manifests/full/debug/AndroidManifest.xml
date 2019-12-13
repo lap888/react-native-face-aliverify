@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.facedemo"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="18"
+        android:targetSdkVersion="26" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:name="com.facedemo.MainApplication"
+        android:allowBackup="false"
+        android:debuggable="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:testOnly="true"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.facedemo.MainActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustResize" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
+
+        <service
+            android:name="com.alipay.mobile.common.logging.process.LogServiceInlite1"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":lite1" />
+        <service
+            android:name="com.alipay.mobile.common.logging.process.LogServiceInlite2"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":lite2" />
+        <service
+            android:name="com.alipay.mobile.common.logging.process.LogServiceInlite3"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":lite3" />
+        <service
+            android:name="com.alipay.mobile.common.logging.process.LogServiceInlite4"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":lite4" />
+        <service
+            android:name="com.alipay.mobile.common.logging.process.LogServiceInlite5"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":lite5" />
+        <service
+            android:name="com.alipay.mobile.common.logging.process.LogServiceInMainProcess"
+            android:enabled="true"
+            android:exported="false" />
+        <service
+            android:name="com.alipay.mobile.common.logging.process.LogServiceInPushProcess"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":push" />
+
+        <activity
+            android:name="com.alipay.zoloz.toyger.workspace.ToygerActivity"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/FaceNoAnimationTheme" >
+        </activity>
+        <activity
+            android:name="com.alipay.zoloz.toyger.workspace.GarfieldActivity"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+
+        <meta-data
+            android:name="appkey"
+            android:value="8FA6890301632_ANDROID" />
+        <meta-data
+            android:name="env_name"
+            android:value="ant_cloud_online" />
+        <meta-data
+            android:name="workspaceId"
+            android:value="prod" />
+        <meta-data
+            android:name="setting.logging.productid"
+            android:value="8FA6890301632_ANDROID" />
+        <meta-data
+            android:name="logging.gateway"
+            android:value="http://cn-hangzhou-mas-log.cloud.alipay.com" />
+    </application>
+
+</manifest>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <string msgid="4600421777120114993" name="abc_action_bar_home_description">"瀏覽首頁"</string>
+    <string msgid="1594238315039666878" name="abc_action_bar_up_description">"向上瀏覽"</string>
+    <string msgid="3588849162933574182" name="abc_action_menu_overflow_description">"更多選項"</string>
+    <string msgid="4076576682505996667" name="abc_action_mode_done">"完成"</string>
+    <string msgid="7468859129482906941" name="abc_activity_chooser_view_see_all">"查看全部"</string>
+    <string msgid="2031811694353399454" name="abc_activitychooserview_choose_application">"選擇應用程式"</string>
+    <string msgid="121134116657445385" name="abc_capital_off">"關閉"</string>
+    <string msgid="3405795526292276155" name="abc_capital_on">"開啟"</string>
+    <string msgid="7723749260725869598" name="abc_search_hint">"搜尋…"</string>
+    <string msgid="3691816814315814921" name="abc_searchview_description_clear">"清除查詢"</string>
+    <string msgid="2550479030709304392" name="abc_searchview_description_query">"搜尋查詢"</string>
+    <string msgid="8264924765203268293" name="abc_searchview_description_search">"搜尋"</string>
+    <string msgid="8928215447528550784" name="abc_searchview_description_submit">"提交查詢"</string>
+    <string msgid="893419373245838918" name="abc_searchview_description_voice">"語音搜尋"</string>
+    <string msgid="3421042268587513524" name="abc_shareactionprovider_share_with">"選擇分享對象"</string>
+    <string msgid="3300176832234831527" name="abc_shareactionprovider_share_with_application">"與「<ns1:g id="APPLICATION_NAME">%s</ns1:g>」分享"</string>
+    <string msgid="1603543279005712093" name="abc_toolbar_collapse_description">"收合"</string>
+    <string name="bottom_tip">請把臉移入圈內保持不動</string>
+    <string name="face_eye_other_auth">換個方式登入</string>
+    <string name="face_eye_other_verify">選擇其他驗證方式</string>
+    <string name="face_eye_protocol_left">使用服务即同意</string>
+    <string name="face_eye_protocol_left_protocol">《支付宝刷脸支付协议》</string>
+    <string name="face_eye_protocol_right">仅限支付宝大陆实名用户使用</string>
+    <string name="garfieldSceneText">人臉檢測中</string>
+    <string msgid="146198913615257606" name="search_menu_title">"搜尋"</string>
+    <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">"999+"</string>
+    <string name="topText_bad_brightness">光線再亮點</string>
+    <string name="topText_bad_eye_openness">請注視屏幕</string>
+    <string name="topText_bad_pitch">請正視手機</string>
+    <string name="topText_bad_quality">請露出正臉</string>
+    <string name="topText_bad_yaw">請正視手機</string>
+    <string name="topText_blink_openness">眨眨眼</string>
+    <string name="topText_distance_too_close">離遠一點</string>
+    <string name="topText_distance_too_far">靠近一點</string>
+    <string name="topText_face_not_in_center">把臉移入圈內</string>
+    <string name="topText_is_blur">再清晰一點</string>
+    <string name="topText_is_moving">再清晰一點</string>
+    <string name="topText_no_face">沒有檢測到臉</string>
+    <string name="topText_stack_time">請保持不動</string>
+    <string name="top_tip_blink">拿起手機，眨眨眼</string>
+    <string name="top_tip_normal">請把臉移入圈內保持不動</string>
+    <string name="zface_detect_camera_unconnect_ok_text">去设置</string>
+    <string name="zface_detect_camera_unconnect_text_default">請查看當前應用是否有訪問相機的權限，或返回重試</string>
+    <string name="zface_detect_camera_unconnect_title">無法啟動相機</string>
+    <string name="zface_detect_dialog_btn_cancel">取消</string>
+    <string name="zface_detect_dialog_btn_exit">退出</string>
+    <string name="zface_detect_dialog_btn_ok">我知道了</string>
+    <string name="zface_detect_dialog_btn_sure">確定</string>
+    <string name="zface_detect_dialog_close_msg">露個臉就能通過</string>
+    <string name="zface_detect_dialog_close_title">確定退出嗎？</string>
+    <string name="zface_detect_dialog_face_operation_error_text">沒有認出你</string>
+    <string name="zface_detect_dialog_first_login">首次使用，請開通刷臉</string>
+    <string name="zface_detect_dialog_first_login_cancel">下次再說</string>
+    <string name="zface_detect_dialog_first_login_confirm">立即開通</string>
+    <string name="zface_detect_dialog_interrupt_error">驗證中斷</string>
+    <string name="zface_detect_dialog_network_error_default">網絡異常，請稍後再試</string>
+    <string name="zface_detect_dialog_over_max_time">未能識別人臉</string>
+    <string name="zface_detect_dialog_over_max_time_msg">刷臉失敗次數過多，請稍後再試</string>
+    <string name="zface_detect_dialog_pose_msg">對準手機，更容易成功</string>
+    <string name="zface_detect_dialog_timeout_error">操作超時</string>
+    <string name="zface_detect_dialog_unsurpport_msg">目前設備不支援刷臉</string>
+    <string name="zface_loginment_dialog_btn_retry">再試一次</string>
+    <string name="zface_loginment_dialog_error_version_msg">目前設備不支援刷臉</string>
+    <string name="zface_loginment_dialog_error_version_msg2">刷臉服務暫僅支援Android 4.3及以上版本</string>
+    <string name="zface_processing">正在處理</string>
+    <string name="zoloz_branding_cloud">螞蟻佐羅提供技術支援</string>
+</resources>
