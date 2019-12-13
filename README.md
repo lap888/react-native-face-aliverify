@@ -77,7 +77,8 @@ Privacy - Camera Usage Description
 ### 添加 framework 文件和 bundle 文件
 
 1. 引入 SDK 中 frameworks 文件夹下所有的 framework 到工程之中。
-2. 
+2. ...
+未完待续
 
 
 
